@@ -9,7 +9,7 @@
 
 Simple weather application with MVVM architecture.
 
-![alt text](https://images.app.goo.gl/u91jz5t6G4Gm7MUg9)
+![Alt text](https://miro.medium.com/max/1212/1*BpxMFh7DdX0_hqX6ABkDgw.png "Optional title")
 
 ## Requirements
 
