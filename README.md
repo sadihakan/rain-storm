@@ -1,5 +1,4 @@
-# Product Name
-> Short blurb about what your product does.
+# RainStorm
 
 [![Swift Version][swift-image]][swift-url]
 [![Build Status][travis-image]][travis-url]
