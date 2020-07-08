@@ -11,8 +11,7 @@
 
 Simple weather application with MVVM architecture.
 
-![](https://images.app.goo.gl/u91jz5t6G4Gm7MUg9)
-
+![alt text](https://images.app.goo.gl/u91jz5t6G4Gm7MUg9)
 
 ## Requirements
 
@@ -27,7 +26,7 @@ See ``LICENSE`` for more information.
 
 [https://github.com/sadihakan/](https://github.com/sadihakan/)
 
-[swift-image]:https://img.shields.io/badge/swift-3.0-orange.svg
+[swift-image]:https://img.shields.io/badge/swift-5.0-orange.svg
 [swift-url]: https://swift.org/
 [license-image]: https://img.shields.io/badge/License-MIT-blue.svg
 [license-url]: LICENSE
