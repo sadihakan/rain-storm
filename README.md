@@ -19,7 +19,7 @@ Simple weather application with MVVM architecture.
 
 ## Meta
 
-Your Name – [@SadiHakan](http://hakankosanoglu.com) – hakankosanoglul@hotmail.com
+Sadi Hakan – [@SadiHakan](http://hakankosanoglu.com) – hakankosanoglul@hotmail.com
 
 See ``LICENSE`` for more information.
 
