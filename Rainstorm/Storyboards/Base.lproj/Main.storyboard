@@ -29,13 +29,81 @@
                     <view key="view" contentMode="scaleToFill" id="22Z-gW-M7k">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITu-Dm-Mt7">
+                                <rect key="frame" x="186" y="52" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJX-FX-Pdi">
+                                <rect key="frame" x="186" y="81" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7aL-eA-Oqf">
+                                <rect key="frame" x="177" y="122" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="0E3-GI-7zs"/>
+                                    <constraint firstAttribute="width" constant="60" id="52E-Q6-0Br"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sun-aa-o0S">
+                                <rect key="frame" x="16" y="141.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMT-ie-W2m">
+                                <rect key="frame" x="356" y="141.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mo0-g0-JCG">
+                                <rect key="frame" x="186" y="202" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Sun-aa-o0S" firstAttribute="centerY" secondItem="7aL-eA-Oqf" secondAttribute="centerY" id="3ON-DY-WVm"/>
+                            <constraint firstItem="ITu-Dm-Mt7" firstAttribute="centerX" secondItem="22Z-gW-M7k" secondAttribute="centerX" id="6Y5-za-ZOp"/>
+                            <constraint firstItem="mo0-g0-JCG" firstAttribute="top" secondItem="7aL-eA-Oqf" secondAttribute="bottom" constant="20" id="BAN-iU-kCE"/>
+                            <constraint firstItem="QJX-FX-Pdi" firstAttribute="top" secondItem="ITu-Dm-Mt7" secondAttribute="bottom" constant="8" id="GiM-V2-yNp"/>
+                            <constraint firstItem="ITu-Dm-Mt7" firstAttribute="top" secondItem="WWa-g5-Fta" secondAttribute="top" constant="8" id="Iv3-6J-xTg"/>
+                            <constraint firstItem="Sun-aa-o0S" firstAttribute="leading" secondItem="WWa-g5-Fta" secondAttribute="leading" constant="16" id="MTi-QS-fRV"/>
+                            <constraint firstItem="WWa-g5-Fta" firstAttribute="bottom" secondItem="mo0-g0-JCG" secondAttribute="bottom" priority="250" constant="20" id="MaX-mX-Ty3"/>
+                            <constraint firstItem="WWa-g5-Fta" firstAttribute="trailing" secondItem="GMT-ie-W2m" secondAttribute="trailing" constant="16" id="QCP-Q2-7Tj"/>
+                            <constraint firstItem="GMT-ie-W2m" firstAttribute="leading" secondItem="7aL-eA-Oqf" secondAttribute="trailing" priority="250" constant="8" id="TjM-ul-JhP"/>
+                            <constraint firstItem="GMT-ie-W2m" firstAttribute="centerY" secondItem="7aL-eA-Oqf" secondAttribute="centerY" id="Z6d-ll-6fN"/>
+                            <constraint firstItem="QJX-FX-Pdi" firstAttribute="centerX" secondItem="ITu-Dm-Mt7" secondAttribute="centerX" id="fps-We-dy8"/>
+                            <constraint firstItem="7aL-eA-Oqf" firstAttribute="leading" secondItem="Sun-aa-o0S" secondAttribute="trailing" priority="250" constant="8" id="kTa-ZC-RGl"/>
+                            <constraint firstItem="7aL-eA-Oqf" firstAttribute="top" secondItem="QJX-FX-Pdi" secondAttribute="bottom" constant="20" id="pSJ-0Q-HEe"/>
+                            <constraint firstItem="7aL-eA-Oqf" firstAttribute="centerX" secondItem="22Z-gW-M7k" secondAttribute="centerX" id="pwn-Pn-E2r"/>
+                            <constraint firstItem="mo0-g0-JCG" firstAttribute="centerX" secondItem="22Z-gW-M7k" secondAttribute="centerX" id="ugC-81-lsB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="WWa-g5-Fta"/>
                     </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="ITu-Dm-Mt7" id="uKx-HC-y81"/>
+                        <outlet property="descriptionLabel" destination="mo0-g0-JCG" id="HuQ-3k-Dl8"/>
+                        <outlet property="iconImageView" destination="7aL-eA-Oqf" id="Uf3-Rs-Fi1"/>
+                        <outlet property="temperatureLabel" destination="Sun-aa-o0S" id="jpa-t1-cUm"/>
+                        <outlet property="timeLabel" destination="QJX-FX-Pdi" id="fko-Fz-fyj"/>
+                        <outlet property="windSpeedLabel" destination="GMT-ie-W2m" id="ckv-4R-wjU"/>
+                        <outletCollection property="regularLabels" destination="Sun-aa-o0S" collectionClass="NSMutableArray" id="aID-BO-W6Z"/>
+                        <outletCollection property="regularLabels" destination="GMT-ie-W2m" collectionClass="NSMutableArray" id="Cdj-4n-3rY"/>
+                        <outletCollection property="smallLabels" destination="QJX-FX-Pdi" collectionClass="NSMutableArray" id="E5l-Tm-Nzy"/>
+                        <outletCollection property="smallLabels" destination="mo0-g0-JCG" collectionClass="NSMutableArray" id="btE-tS-hCW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gZN-VO-2Tf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="900" y="138"/>
+            <point key="canvasLocation" x="910" y="138"/>
         </scene>
         <!--Week View Controller-->
         <scene sceneID="Kdj-KB-cOA">

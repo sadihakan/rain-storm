@@ -75,7 +75,6 @@ final class RootViewController: UIViewController {
         dayViewController.view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         dayViewController.view.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         dayViewController.view.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        dayViewController.view.heightAnchor.constraint(equalToConstant: Layout.DayView.height).isActive = true
 
         // Configure Week View
         weekViewController.view.topAnchor.constraint(equalTo: dayViewController.view.bottomAnchor).isActive = true
@@ -90,12 +89,13 @@ final class RootViewController: UIViewController {
     
     private func setupViewModel(with viewModel: RootViewModel) {
         // Configure View Model
-        viewModel.didFetchWeatherData = { [weak self] (data, error) in
+        viewModel.didFetchWeatherData = { [weak self] (weatherData, error) in
             if let _ = error {
                 // Notify User
                 self?.presentAlert(of: .noWeatherDataAvailable)
-            } else if let data = data {
-                print(data)
+            } else if let weatherData = weatherData {
+                let dayViewModel = DayViewModel(weatherData: weatherData.weatherData)
+                self?.dayViewController.viewModel = dayViewModel
             } else {
                 // Notify User
                 self?.presentAlert(of: .noWeatherDataAvailable)
@@ -128,12 +128,3 @@ final class RootViewController: UIViewController {
     }
 }
 
-extension RootViewController {
-    
-    fileprivate enum Layout {
-        enum DayView {
-            static let height: CGFloat = 200.0
-        }
-    }
-    
-}
