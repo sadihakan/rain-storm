@@ -16,6 +16,7 @@ struct OpenWeatherAppResponse: Codable {
     let wind: Wind
     let timezone: Int
     let name: String
+    let dt: Int
     
     // MARK: - Coord
     struct Coord: Codable {

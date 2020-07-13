@@ -25,6 +25,7 @@ protocol WeatherConditions {
     var wind: OpenWeatherAppResponse.Wind { get }
     var timezone: Int { get }
     var name: String { get }
+    var dt: Int { get }
     
 }
 

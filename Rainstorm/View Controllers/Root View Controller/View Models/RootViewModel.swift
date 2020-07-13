@@ -42,29 +42,33 @@ class RootViewModel {
             if let response = response as? HTTPURLResponse {
                 print("Status Code: \(response.statusCode)")
             }
+            
+            DispatchQueue.main.async {
+                if let error = error {
+                    print("Unable to Fetch Weather Data \(error)")
 
-            if let error = error {
-                print("Unable to Fetch Weather Data \(error)")
+                    self?.didFetchWeatherData?(nil, .noWeatherDataAvailable)
+                } else if let data = data {
+                    // Initialize JSON Decoder
+                    let decoder = JSONDecoder()
+                    
+                    decoder.dateDecodingStrategy = .secondsSince1970
 
-                self?.didFetchWeatherData?(nil, .noWeatherDataAvailable)
-            } else if let data = data {
-                // Initialize JSON Decoder
-                let decoder = JSONDecoder()
+                    do {
+                        // Decode JSON Response
+                        let darkSkyResponse = try decoder.decode(OpenWeatherAppResponse?.self, from: data)
 
-                do {
-                    // Decode JSON Response
-                    let darkSkyResponse = try decoder.decode(OpenWeatherAppResponse?.self, from: data)
+                        // Invoke Completion Handler
+                        self?.didFetchWeatherData?(darkSkyResponse, nil)
+                    } catch {
+                        print("Unable to Decode JSON Response \(error)")
 
-                    // Invoke Completion Handler
-                    self?.didFetchWeatherData?(darkSkyResponse, nil)
-                } catch {
-                    print("Unable to Decode JSON Response \(error)")
-
-                    // Invoke Completion Handler
+                        // Invoke Completion Handler
+                        self?.didFetchWeatherData?(nil, .noWeatherDataAvailable)
+                    }
+                } else {
                     self?.didFetchWeatherData?(nil, .noWeatherDataAvailable)
                 }
-            } else {
-                self?.didFetchWeatherData?(nil, .noWeatherDataAvailable)
             }
         }.resume()
     }

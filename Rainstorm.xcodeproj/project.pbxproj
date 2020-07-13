@@ -10,6 +10,7 @@
 		FA2515B724BCA448002340E7 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2515B624BCA448002340E7 /* WeatherData.swift */; };
 		FA2515BA24BCAE82002340E7 /* DayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2515B924BCAE81002340E7 /* DayViewModel.swift */; };
 		FA2515BC24BCB52B002340E7 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2515BB24BCB52B002340E7 /* Styles.swift */; };
+		FA2515BE24BCBB25002340E7 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2515BD24BCBB25002340E7 /* UIImage.swift */; };
 		FA3D714024B5CD3100EE097B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3D713F24B5CD3100EE097B /* AppDelegate.swift */; };
 		FA3D714224B5CD3100EE097B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3D714124B5CD3100EE097B /* SceneDelegate.swift */; };
 		FA3D714424B5CD3100EE097B /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3D714324B5CD3100EE097B /* RootViewController.swift */; };
@@ -30,6 +31,7 @@
 		FA2515B624BCA448002340E7 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		FA2515B924BCAE81002340E7 /* DayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayViewModel.swift; sourceTree = "<group>"; };
 		FA2515BB24BCB52B002340E7 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		FA2515BD24BCBB25002340E7 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		FA3D713C24B5CD3100EE097B /* Rainstorm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rainstorm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA3D713F24B5CD3100EE097B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA3D714124B5CD3100EE097B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			children = (
 				FA3D716224B5D4C300EE097B /* UIViewController.swift */,
 				FA3D716424B5D56A00EE097B /* UIStoryboard.swift */,
+				FA2515BD24BCBB25002340E7 /* UIImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				FA2515BA24BCAE82002340E7 /* DayViewModel.swift in Sources */,
 				FA3D716824B5DFD500EE097B /* WeatherRequest.swift in Sources */,
 				FA3D715F24B5D2B800EE097B /* WeekViewController.swift in Sources */,
+				FA2515BE24BCBB25002340E7 /* UIImage.swift in Sources */,
 				FA3D714424B5CD3100EE097B /* RootViewController.swift in Sources */,
 				FA3D716B24B5E48100EE097B /* Configuration.swift in Sources */,
 				FA3D716324B5D4C300EE097B /* UIViewController.swift in Sources */,

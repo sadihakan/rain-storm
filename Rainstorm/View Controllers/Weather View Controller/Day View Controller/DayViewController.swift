@@ -26,7 +26,7 @@ final class DayViewController: UIViewController {
     
     @IBOutlet var dateLabel: UILabel! {
         didSet {
-            dateLabel.textColor = UIColor.Rainstorm.base
+            dateLabel.textColor = UIColor.Rainstorm.baseTintColor
             dateLabel.font = UIFont.Rainstorm.heavyLarge
         }
     }
@@ -34,6 +34,7 @@ final class DayViewController: UIViewController {
     @IBOutlet var iconImageView: UIImageView! {
         didSet {
             iconImageView.contentMode = .scaleAspectFit
+            iconImageView.tintColor = UIColor.Rainstorm.baseTintColor
         }
     }
     
@@ -51,6 +52,14 @@ final class DayViewController: UIViewController {
             }
         }
     }
+    
+    @IBOutlet var weatherDataViews: [UIView]! {
+        didSet {
+            for view in weatherDataViews {
+                view.isHidden = true
+            }
+        }
+    }
 
     @IBOutlet var smallLabels: [UILabel]! {
         didSet {
@@ -58,6 +67,13 @@ final class DayViewController: UIViewController {
                 label.textColor = .black
                 label.font = UIFont.Rainstorm.lightSmall
             }
+        }
+    }
+    
+    @IBOutlet var activityIndicatorView: UIActivityIndicatorView! {
+        didSet {
+            activityIndicatorView.startAnimating()
+            activityIndicatorView.hidesWhenStopped = true
         }
     }
     
@@ -71,17 +87,33 @@ final class DayViewController: UIViewController {
         
     }
     
-    // MARK: - Helper Methods
-    
+    // MARK: - View Methods
+
     private func setupView() {
         // Configure View
-        view.backgroundColor = .green
+        view.backgroundColor = UIColor.Rainstorm.lightBackgroundColor
     }
     
     // MARK: - Helper Methods
 
     private func setupViewModel(with viewModel: DayViewModel) {
-        print(viewModel)
+        // Hide Activity Indicator View
+        activityIndicatorView.stopAnimating()
+
+        // Configure Labels
+        dateLabel.text = viewModel.date
+        timeLabel.text = viewModel.time
+        windSpeedLabel.text = viewModel.windSpeed
+        temperatureLabel.text = viewModel.temperature
+        descriptionLabel.text = viewModel.summary
+
+        // Configure Icon Image View
+        iconImageView.image = viewModel.image
+
+        // Show Weather Data Views
+        for view in weatherDataViews {
+            view.isHidden = false
+        }
     }
     
 }

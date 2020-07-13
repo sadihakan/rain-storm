@@ -67,6 +67,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Rmf-au-kkN">
+                                <rect key="frame" x="197" y="142" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -74,11 +77,13 @@
                             <constraint firstItem="ITu-Dm-Mt7" firstAttribute="centerX" secondItem="22Z-gW-M7k" secondAttribute="centerX" id="6Y5-za-ZOp"/>
                             <constraint firstItem="mo0-g0-JCG" firstAttribute="top" secondItem="7aL-eA-Oqf" secondAttribute="bottom" constant="20" id="BAN-iU-kCE"/>
                             <constraint firstItem="QJX-FX-Pdi" firstAttribute="top" secondItem="ITu-Dm-Mt7" secondAttribute="bottom" constant="8" id="GiM-V2-yNp"/>
+                            <constraint firstItem="Rmf-au-kkN" firstAttribute="centerX" secondItem="7aL-eA-Oqf" secondAttribute="centerX" id="HbO-iv-loS"/>
                             <constraint firstItem="ITu-Dm-Mt7" firstAttribute="top" secondItem="WWa-g5-Fta" secondAttribute="top" constant="8" id="Iv3-6J-xTg"/>
                             <constraint firstItem="Sun-aa-o0S" firstAttribute="leading" secondItem="WWa-g5-Fta" secondAttribute="leading" constant="16" id="MTi-QS-fRV"/>
                             <constraint firstItem="WWa-g5-Fta" firstAttribute="bottom" secondItem="mo0-g0-JCG" secondAttribute="bottom" priority="250" constant="20" id="MaX-mX-Ty3"/>
                             <constraint firstItem="WWa-g5-Fta" firstAttribute="trailing" secondItem="GMT-ie-W2m" secondAttribute="trailing" constant="16" id="QCP-Q2-7Tj"/>
                             <constraint firstItem="GMT-ie-W2m" firstAttribute="leading" secondItem="7aL-eA-Oqf" secondAttribute="trailing" priority="250" constant="8" id="TjM-ul-JhP"/>
+                            <constraint firstItem="Rmf-au-kkN" firstAttribute="centerY" secondItem="7aL-eA-Oqf" secondAttribute="centerY" id="YiL-ts-F1G"/>
                             <constraint firstItem="GMT-ie-W2m" firstAttribute="centerY" secondItem="7aL-eA-Oqf" secondAttribute="centerY" id="Z6d-ll-6fN"/>
                             <constraint firstItem="QJX-FX-Pdi" firstAttribute="centerX" secondItem="ITu-Dm-Mt7" secondAttribute="centerX" id="fps-We-dy8"/>
                             <constraint firstItem="7aL-eA-Oqf" firstAttribute="leading" secondItem="Sun-aa-o0S" secondAttribute="trailing" priority="250" constant="8" id="kTa-ZC-RGl"/>
@@ -89,6 +94,7 @@
                         <viewLayoutGuide key="safeArea" id="WWa-g5-Fta"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="Rmf-au-kkN" id="ARd-Si-57L"/>
                         <outlet property="dateLabel" destination="ITu-Dm-Mt7" id="uKx-HC-y81"/>
                         <outlet property="descriptionLabel" destination="mo0-g0-JCG" id="HuQ-3k-Dl8"/>
                         <outlet property="iconImageView" destination="7aL-eA-Oqf" id="Uf3-Rs-Fi1"/>
@@ -99,6 +105,12 @@
                         <outletCollection property="regularLabels" destination="GMT-ie-W2m" collectionClass="NSMutableArray" id="Cdj-4n-3rY"/>
                         <outletCollection property="smallLabels" destination="QJX-FX-Pdi" collectionClass="NSMutableArray" id="E5l-Tm-Nzy"/>
                         <outletCollection property="smallLabels" destination="mo0-g0-JCG" collectionClass="NSMutableArray" id="btE-tS-hCW"/>
+                        <outletCollection property="weatherDataViews" destination="mo0-g0-JCG" collectionClass="NSMutableArray" id="6py-8Q-gJ4"/>
+                        <outletCollection property="weatherDataViews" destination="GMT-ie-W2m" collectionClass="NSMutableArray" id="OIg-Hl-v9K"/>
+                        <outletCollection property="weatherDataViews" destination="7aL-eA-Oqf" collectionClass="NSMutableArray" id="BC8-dN-XSj"/>
+                        <outletCollection property="weatherDataViews" destination="Sun-aa-o0S" collectionClass="NSMutableArray" id="mBI-1J-mNr"/>
+                        <outletCollection property="weatherDataViews" destination="QJX-FX-Pdi" collectionClass="NSMutableArray" id="jua-Y9-62F"/>
+                        <outletCollection property="weatherDataViews" destination="ITu-Dm-Mt7" collectionClass="NSMutableArray" id="Q7A-oy-A10"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gZN-VO-2Tf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
